@@ -15,5 +15,18 @@ module WeatherApi
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.after_initialize do
+      redis = Redis.new
+       if redis
+        redis.set("Santiago", {longitude: "-33.454743", latitude: "-70.660382"}.to_json)
+        redis.set("Zurich",   {longitude: "47.381483",  latitude: "8.545130"}.to_json)
+        redis.set("Auckland", {longitude: "-36.876945", latitude: "174.761096"}.to_json)
+        redis.set("Sydney",   {longitude: "-33.886662", latitude: "151.197477"}.to_json)
+        redis.set("Londres",  {longitude: "51.503724",  latitude: "-0.125821"}.to_json)
+        redis.set("Georgia",  {longitude: "42.093953",  latitude: "43.408664"}.to_json)
+       end
+    end
+
   end
 end

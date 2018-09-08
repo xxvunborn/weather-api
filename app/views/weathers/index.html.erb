@@ -1,0 +1,31 @@
+<div class="row" style="width: 100rem;">
+<% @cities_information.each do |city| %>
+  <div class="col-xl-4 col-md-12 col-sm-12">
+    <div class="card" >
+      <div class="row">
+        <img class= "card-img-center" src="https://darksky.net/images/weather-icons/<%=city[1]["icon"]%>.png" alt="City Weather Icon" width="84" height="84">
+        <div class="card-body">
+          <h1 class="card-title"><%= city[0] %></h5>
+          <p class="card-text"><b><h2><%= city[1]["temperature"] %>˚</b></h1> <%= city[1]["summary"] %></p>
+        </div>
+        <div class="card-body text-right">
+          <h4 class="card-title">humidity:</h5>
+          <p class="card-text"><%= city[1]["humidity"] %>%</p>
+          <h4 class="card-title">Wind:</h5>
+          <p class="card-text"><%= city[1]["windSpeed"] %> mph</p>
+          <h4 class="card-title">UV:</h5>
+          <p class="card-text"><%= city[1]["uvIndex"] %> %</p>
+          <h4 class="card-title">Visibility:</h5>
+          <p class="card-text"><%= city[1]["visibility"] %> mi</p>
+          <h4 class="card-title">Pressure:</h5>
+          <p class="card-text"><%= city[1]["pressure"] %> mb</p>
+        </div>
+    </div>
+  </div>
+    <div class="card-footer">
+      <small class="text-muted">Last updated <%= Time.at(city[1]["time"]) %></small>
+    </div>
+    </br>
+  </div>
+<% end %>
+</div>

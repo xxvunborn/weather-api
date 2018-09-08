@@ -1,5 +1,6 @@
 require 'sidekiq-scheduler'
 require 'forecast_io'
+require 'dotenv/load'
 
 class WeatherJob
   include Sidekiq::Worker
@@ -27,6 +28,6 @@ class WeatherJob
   end
 
   ForecastIO.configure do |configuration|
-    configuration.api_key = ENV["FORECAST_KEY"]
+    configuration.api_key = ENV['FORECAST_KEY']
   end
 end
