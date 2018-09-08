@@ -44,6 +44,8 @@ gem 'sidekiq-scheduler'
 gem 'forecast_io'
 # Bootstrap
 gem 'bootstrap', '~> 4.1.3'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

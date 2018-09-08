@@ -1,0 +1,4 @@
+:schedule:
+  weather_job:
+    cron: '0 * * * * *'   # Runs once per minute, watch the forecast-io limit for request. TODO: Change in production to every 10s
+    class: WeatherJob
