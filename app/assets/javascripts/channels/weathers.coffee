@@ -10,7 +10,7 @@ App.room = App.cable.subscriptions.create "WeathersChannel",
     cities_data = data['message']
 
     for key, value of cities_data
-      $('#'+key+'-temperature').text(value.temperature + '˚')
+      $('#'+key+'-temperature').text(value.temperature + '˚a')
       $('#'+key+'-sumary').text(value.summary)
       $('#'+key+'-humidity').text(value.humidity)
       $('#'+key+'-windspeed').text(value.windSpeed)

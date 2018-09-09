@@ -16,5 +16,4 @@ class WeatherDataJob < ApplicationJob
     end
     cities
   end
-
 end
