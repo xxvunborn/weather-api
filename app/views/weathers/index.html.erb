@@ -3,7 +3,7 @@
   <div class="col-xl-4 col-md-12 col-sm-12">
     <div class="card" >
       <div class="row">
-        <img class= "card-img-center" src="https://darksky.net/images/weather-icons/<%=city[1]["icon"]%>.png" alt="City Weather Icon" width="84" height="84">
+        <img class= "card-img-center" id="<%=city[0]%>-img"src="https://darksky.net/images/weather-icons/<%=city[1]["icon"]%>.png" alt="City Weather Icon" width="84" height="84">
         <div class="card-body">
           <h1 class="card-title"><%= city[0] %></h5>
           <b><h2><p class="card-text" id="<%=city[0]%>-temperature"><%= city[1]["temperature"] %>˚</p></b></h1> 
