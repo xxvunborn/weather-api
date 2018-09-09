@@ -41,7 +41,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 # Sidekiq
 gem 'sidekiq'
 # Sidekiq scheduler
-gem 'sidekiq-scheduler'
+gem 'sidekiq-cron'
 # Forecast io weather
 gem 'forecast_io'
 # Bootstrap

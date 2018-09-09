@@ -1,0 +1,4 @@
+first_job:
+  cron: "*/1 * * * *"
+  class: "WeatherJob"
+  queue: weather_job
