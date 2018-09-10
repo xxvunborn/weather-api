@@ -1,4 +1,4 @@
 first_job:
-  cron: "*/10 * * * *"
+  cron: "*/1 * * * *"
   class: "WeatherJob"
   queue: weather_job
