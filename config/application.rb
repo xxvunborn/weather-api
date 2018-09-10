@@ -27,7 +27,7 @@ module WeatherApi
         redis.set("Londres",  {longitude: "51.503724",  latitude: "-0.125821"}.to_json)
         redis.set("Georgia",  {longitude: "42.093953",  latitude: "43.408664"}.to_json)
        end
-       WeatherJob.new.perform
+       #WeatherJob.new.perform
     end
   end
 end
