@@ -2,6 +2,9 @@ redis: &redis
   adapter: redis
   url: redis://localhost:6379/15
 
-production: *redis
 development: *redis
 test: *redis
+production:
+  adapter: redis
+  url: redis://redistogo:503a9cc1a03190c76523d82b0c56bb30@spinyfin.redistogo.com:10185/
+
