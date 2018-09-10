@@ -1,5 +1,7 @@
 require 'forecast_io'
-require 'dotenv/load'
+if defined? Dotenv
+  require 'dotenv/load'
+end
 
 class WeatherJob
   include Sidekiq::Worker
